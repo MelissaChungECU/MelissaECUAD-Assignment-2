@@ -1,7 +1,7 @@
 /// HTML CODE ///
 
 <div class="redcircle"></div>
-<div class="yellowcircle"></div>
+<div class="yellowcircle" onclick="myFunction"()></div>
 <div class="greencircle"></div>
 <div class="bluecircle"></div>
 <div class="partition1"></div>
@@ -56,7 +56,7 @@
 <h1>DIY EMOJI</h1> 
 <h2>Choose from each section</h2>
 <h3>Copy/Paste</h3>
-<div class="Yellowcircle"></div>
+<div  id = "Yellowcircle"></div>
 <div data-hidden="true" class="Greencircle"></div>
 
 /// CSS ///
@@ -318,6 +318,10 @@ h3{
   top: 150px;
   left:600px;
 }
+
+[data-hidden="true"]{
+  opacity: 0;
+
 .Greencircle{
   background-color: green;
   width: 100px;
@@ -336,8 +340,12 @@ h3{
 ///JS Code///
 
 <script>
-var greencircle = document.querySelector(".greencircle");
+function myFunction() {
+  document.getElementById("Yellowcircle").style.display = "block"; 
+}
+var greencircle = document.querySelector(".greencircle")
+var displaySetting = greencircle.style.display;
 greencircle.addEventListener("click", function(){  
-  Greencircle.setAttribute("data-hidden", "false");
+  Greencircle.setAttribute("data-hidden","false");
 } );
 </script>
