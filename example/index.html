@@ -1,13 +1,13 @@
 <div class="redcircle"></div>
-<div class="yellowcircle1"></div>
+<div onclick="one()" class="yellowcircle1"></div>
 <div class="greencircle"></div>
 <div class="bluecircle"></div>
 <div class="partition0"></div>
 <div class="partition1"></div>
 <div class="partition2"></div>
 <div class="partition3"></div>
-<div class="normaleye1"></div>
-<div class="normaleye2"></div>
+<div onclick="two()"class="normaleye1"></div>
+<div onclick="two()"class="normaleye2"></div>
 <div class="eye1"></div>
 <div class="eye2"></div>
 <div class="Neye1"></div>
@@ -18,7 +18,7 @@
 <div class="smile2"></div>
 <div class="white"></div>
 <div class="white1"></div>
-<div class="surprised"></div>
+<div onclick="three()"class="surprised"></div>
 <div class="semi-surprised"></div>
 <div class="white2"></div>
 <div class="lips"></div>
@@ -28,7 +28,6 @@
 <h2>*Choose from each section*</h2>
 <h3>Save</h3>
 <h4>Send</h4>
-<div Face    Eyes    Mouth>
 <div id = "Yellowcircle"></div>
 <div id = "Bigeye1" ></div>
 <div id = "Bigeye2" ></div>
@@ -37,382 +36,375 @@
 <div id = "bigsemimouth"></div>
 
 
+
+
 <style>
-  .yellowcircle1{
+  .partition0{
+    width:2px;
+    height:320px;
+    Background-color:black;
+    position: absolute;
+    left: 8px;
+    top:90px;
+    z-index:1;
+  }
+  .partition1{
+    width:2px;
+    height:320px;
+    Background-color:black;
+    position: absolute;
+    left: 150px;
+    top:90px;
+    z-index:1;
+  }
+  .partition2{
+    width:2px;
+    height:320px;
+    Background-color:black;
+    position: absolute;
+    left: 300px;
+    top: 90px;
+    z-index:1;
+  }
+  .partition3{
+    width:2px;
+    height:320px;
+    Background-color:black;
+    position: absolute;
+    left:450px;
+    top:90px;
+    z-index:1;
+  }
+  .greencircle{
     width:60px;
-  height:60px;
-  Background-color: yellow;
-  border: 1pt solid yellow;
-  border-radius:50%;
-  position: absolute;
-  top: 180px;
-  left:50px;
-  z-index:1;
+    height:60px;
+    Background-color:green;
+    border:1pt solid green;
+    border-radius:50%;
+    position: absolute;
+    left:50px;
+    top:260px;
+    z-index:1;
+  }
+  .bluecircle{
+    width:60px;
+    height:60px;
+    Background-color:blue;
+    border:1pt solid blue;
+    border-radius: 50%;
+    position: absolute;
+    left:50px;
+    top:340px;
+    z-index:1;
+  }
+  .normaleye1{
+    width:10px;
+    height:20px;
+    Background-color:black;
+    border: 1pt solid black;
+    border-radius:50%;
+    position: absolute;
+    left: 200px;
+    top:110px;
+    z-index:1;
+  }
+  .normaleye2{
+    width:10px;
+    height:20px;
+    Background-color:black;
+    border:1pt solid black;
+    border-radius: 50%;
+    position: absolute;
+    top:110px;
+    left:230px;
+    z-index:1;
+  }
+  .eye1{
+    width:15px;
+    height: 1px;
+    Background-color: black;
+    border:1pt solid black;
+    position: absolute;
+    top:200px;
+    left:200px;
+    z-index:1;
+  }
+  .eye2{
+    width:15px;
+    height:1px;
+    Background-color:black;
+    border:1pt solid black;
+    position: absolute;
+    top:200px;
+    left:230px;
+    z-index:1;
+  }
+  .Neye1{
+    width:10px;
+    height:20px;
+    Background-color:white;
+    border:1pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:280px;
+    left:200px;
+    z-index:1;
+  }
+  .Neye2{
+    width:10px;
+    height:20px;
+    Background-color:white;
+    border:1pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:280px;
+    left:230px;
+    z-index:1;
+  }
+  .eyeball1{
+    width:3px;
+    height:5px;
+    Background-color:black;
+    border:2pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:286px;
+    left:200px;
+    z-index:1;
+  }
+  .eyeball2{
+    width:3px;
+    height:5px;
+    Background-color: black;
+    border: 2pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:286px;
+    left:230px;
+    z-index:1;
+  }
+  .smile1{
+    width:10px;
+    height:20px;
+    Background-color:white;
+    border:2.5pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:360px;
+    left:195px;
+    z-index:1;
+  }
+  .smile2{
+    width:10px;
+    height:20px;
+    Background-color:white;
+    border:2.5pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:360px;
+    left:225px;
+    z-index:1;
+  }
+  .white{
+    width:20px;
+    height:20px;
+    Background-color:white;
+    position: absolute;
+    top:372px;
+    left:225px;
+    z-index:1;
+  }
+  .white1{
+    width:20px;
+    height:20px;
+    Background-color:white;
+    position:absolute;
+    top:372px;
+    left:195px;
+    z-index:1;
+  }
+  .surprised{
+    width:25px;
+    height:25px;
+    Background-color:rgb(187, 81, 81);
+    border:0pt solid rgb(187, 81, 81);
+    border-radius:50%;
+    position: absolute;
+    top:120px;
+    left:360px;
+    z-index:1;
+  }
+  .semi-surprised{
+    width:30px;
+    height:30px;
+    Background-color:rgb(187, 81, 81);
+    border-radius:50%;
+    position: absolute;
+    top:200px;
+    left:360px;
+    z-index:1;
+  }
+  .white2{
+    width:30px;
+    height:20px;
+    Background-color:white;
+    position: absolute;
+    top:215px;
+    left:360px;
+    z-index:1;
+  }
+  .lips{
+    width: 40px;
+    height:4px;
+    Background-color: black;
+    position: absolute;
+    top:290px;
+    left: 355px;
+    z-index:1;
+  }
+  .happy{
+    width:25px;
+    height:40px;
+    Background-color:white;
+    border:4pt solid black;
+    border-radius:50%;
+    position: absolute;
+    top:335px;
+    left:360px;
+    z-index:1;
+  }
+  .white3{
+    width:40px;
+    height:40px;
+    Background-color:white;
+    position: absolute;
+    top:322px;
+    left:360px;
+    z-index:1;
+  }
+  .SBackground{
+      Background-color:white;
+      width:445;
+      height:320;
+      position:fixed;
+      top: 90;
+    }
+  .Background{
+      Background-color: lightgrey;
+      width:445;
+      height:500;
+      position:absolute;
+    }
+  h1{
+    position: absolute;
+   left:570px;
+   z-index:1;
+  }
+  h2{
+    font-size:12pt;
+    position: absolute;
+    right:1100px;
+    top:5px;
+    z-index:1;
+  }
+  h3{
+    position:absolute;
+    left:700px;
+    top:337px;
+    Border: 2pt solid black;
+    border-radius:30%;
+    padding:10px;
+    font-size: 16pt;
+    background-color:lightgrey;
+  }
+  h3:visited{
+    background-color: lightskyblue;
+  }
+  h4{
+    position:absolute;
+    left:550px;
+    top:330px;
+    Border: 2pt solid black;
+    border-radius:30%;
+    padding:10px;
+    font-size: 16pt;
+    font-style: bold;
+    background-color:lightgrey;
+  }
+  #Yellowcircle{
+    Background-color: yellow;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position: absolute;
+    top: 150px;
+    left:600px;
+    opacity:0;
+  }
+  #Bigeye1{
+    width:10px;
+    height:20px;
+    Background-color:black;
+    border: 1pt solid black;
+    border-radius:50%;
+    position: absolute;
+    left: 625px;
+    top:180px;
+    opacity:0; 
+  } 
+  #Bigeye2{
+    width:10px;
+    height:20px;
+    Background-color:black;
+    border: 1pt solid black;
+    border-radius:50%;
+    position: absolute;
+    left: 665px;
+    top:180px; 
+    opacity:0;
+  }
+  #bigsemimouth{
+    width:30px;
+    height:30px;
+    Background-color:rgb(187, 81, 81);
+    border-radius:50%;
+    position: absolute;
+    top:210px;
+    left:637px;
+    z-index:1;
+    opacity:0;
+  }
+   .yellowcircle1{
+      width:60px;
+    height:60px;
+    Background-color: yellow;
+    border: 1pt solid yellow;
+    border-radius:50%;
+    position: absolute;
+    top: 180px;
+    left:50px;
+    z-index:1;
   }
   .redcircle{
-  width:60px;
-  height:60px;
-  Background-color:red;
-  border:1pt solid red;
-  border-radius:50%;
-  position: absolute;
-  top:100px;
-  left:50px;
-  z-index:1;
-}
-.partition0{
-  width:2px;
-  height:320px;
-  Background-color:black;
-  position: absolute;
-  left: 8px;
-  top:90px;
-  z-index:1;
-}
-.partition1{
-  width:2px;
-  height:320px;
-  Background-color:black;
-  position: absolute;
-  left: 150px;
-  top:90px;
-  z-index:1;
-}
-.partition2{
-  width:2px;
-  height:320px;
-  Background-color:black;
-  position: absolute;
-  left: 300px;
-  top: 90px;
-  z-index:1;
-}
-.partition3{
-  width:2px;
-  height:320px;
-  Background-color:black;
-  position: absolute;
-  left:450px;
-  top:90px;
-  z-index:1;
-}
-.greencircle{
-  width:60px;
-  height:60px;
-  Background-color:green;
-  border:1pt solid green;
-  border-radius:50%;
-  position: absolute;
-  left:50px;
-  top:260px;
-  z-index:1;
-}
-.bluecircle{
-  width:60px;
-  height:60px;
-  Background-color:blue;
-  border:1pt solid blue;
-  border-radius: 50%;
-  position: absolute;
-  left:50px;
-  top:340px;
-  z-index:1;
-}
-.normaleye1{
-  width:10px;
-  height:20px;
-  Background-color:black;
-  border: 1pt solid black;
-  border-radius:50%;
-  position: absolute;
-  left: 200px;
-  top:110px;
-  z-index:1;
-}
-.normaleye2{
-  width:10px;
-  height:20px;
-  Background-color:black;
-  border:1pt solid black;
-  border-radius: 50%;
-  position: absolute;
-  top:110px;
-  left:230px;
-  z-index:1;
-}
-.eye1{
-  width:15px;
-  height: 1px;
-  Background-color: black;
-  border:1pt solid black;
-  position: absolute;
-  top:200px;
-  left:200px;
-  z-index:1;
-}
-.eye2{
-  width:15px;
-  height:1px;
-  Background-color:black;
-  border:1pt solid black;
-  position: absolute;
-  top:200px;
-  left:230px;
-  z-index:1;
-}
-.Neye1{
-  width:10px;
-  height:20px;
-  Background-color:white;
-  border:1pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:280px;
-  left:200px;
-  z-index:1;
-}
-.Neye2{
-  width:10px;
-  height:20px;
-  Background-color:white;
-  border:1pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:280px;
-  left:230px;
-  z-index:1;
-}
-.eyeball1{
-  width:3px;
-  height:5px;
-  Background-color:black;
-  border:2pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:286px;
-  left:200px;
-  z-index:1;
-}
-.eyeball2{
-  width:3px;
-  height:5px;
-  Background-color: black;
-  border: 2pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:286px;
-  left:230px;
-  z-index:1;
-}
-.smile1{
-  width:10px;
-  height:20px;
-  Background-color:white;
-  border:2.5pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:360px;
-  left:195px;
-  z-index:1;
-}
-.smile2{
-  width:10px;
-  height:20px;
-  Background-color:white;
-  border:2.5pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:360px;
-  left:225px;
-  z-index:1;
-}
-.white{
-  width:20px;
-  height:20px;
-  Background-color:white;
-  position: absolute;
-  top:372px;
-  left:225px;
-  z-index:1;
-}
-.white1{
-  width:20px;
-  height:20px;
-  Background-color:white;
-  position:absolute;
-  top:372px;
-  left:195px;
-  z-index:1;
-}
-.surprised{
-  width:25px;
-  height:25px;
-  Background-color:rgb(187, 81, 81);
-  border:0pt solid rgb(187, 81, 81);
-  border-radius:50%;
-  position: absolute;
-  top:120px;
-  left:360px;
-  z-index:1;
-}
-.semi-surprised{
-  width:30px;
-  height:30px;
-  Background-color:rgb(187, 81, 81);
-  border-radius:50%;
-  position: absolute;
-  top:200px;
-  left:360px;
-  z-index:1;
-}
-.white2{
-  width:30px;
-  height:20px;
-  Background-color:white;
-  position: absolute;
-  top:215px;
-  left:360px;
-  z-index:1;
-}
-.lips{
-  width: 40px;
-  height:4px;
-  Background-color: black;
-  position: absolute;
-  top:290px;
-  left: 355px;
-  z-index:1;
-}
-.happy{
-  width:25px;
-  height:40px;
-  Background-color:white;
-  border:4pt solid black;
-  border-radius:50%;
-  position: absolute;
-  top:335px;
-  left:360px;
-  z-index:1;
-}
-.white3{
-  width:40px;
-  height:40px;
-  Background-color:white;
-  position: absolute;
-  top:322px;
-  left:360px;
-  z-index:1;
-}
-.SBackground{
-    Background-color:white;
-    width:445;
-    height:320;
-    position:fixed;
-    top: 90;
+    width:60px;
+    height:60px;
+    Background-color:red;
+    border:1pt solid red;
+    border-radius:50%;
+    position: absolute;
+    top:100px;
+    left:50px;
+    z-index:1;
   }
-.Background{
-    Background-color: lightgrey;
-    width:445;
-    height:500;
-    position:absolute;
-  }
-h1{
-  position: absolute;
- left:570px;
- z-index:1;
-}
-h2{
-  font-size:12pt;
-  position: absolute;
-  right:525px;
-  top:5px;
-  z-index:1;
-}
-h3{
-  position:absolute;
-  left:700px;
-  top:337px;
-  Border: 2pt solid black;
-  border-radius:30%;
-  padding:10px;
-  font-size: 16pt;
-  background-color:lightgrey;
-}
-h3:visited{
-  background-color: lightskyblue;
-}
-h4{
-  position:absolute;
-  left:550px;
-  top:330px;
-  Border: 2pt solid black;
-  border-radius:30%;
-  padding:10px;
-  font-size: 16pt;
-  font-style: bold;
-  background-color:lightgrey;
-}
-h4:visited{
-  background-color: lightskyblue;
-}
-#Yellowcircle{
-  Background-color: yellow;
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  position: absolute;
-  top: 150px;
-  left:600px;
-  opacity:0;
-}
-#Bigeye1{
-  width:10px;
-  height:20px;
-  Background-color:black;
-  border: 1pt solid black;
-  border-radius:50%;
-  position: absolute;
-  left: 625px;
-  top:180px;
-  opacity:0; 
-} 
-#Bigeye2{
-  width:10px;
-  height:20px;
-  Background-color:black;
-  border: 1pt solid black;
-  border-radius:50%;
-  position: absolute;
-  left: 665px;
-  top:180px; 
-  opacity:0;
-}
-#bigsemimouth{
-  width:30px;
-  height:30px;
-  Background-color:rgb(187, 81, 81);
-  border-radius:50%;
-  position: absolute;
-  top:210px;
-  left:637px;
-  z-index:1;
-  opacity:0;
-}
 
-<script>
-$(window).load(function(){
-$(function() {
-    $("yellowcircle1").click(function(){
-        $(#Yellowcircle).css("opacity", "100");
-    })
-$(window).load(function(){
-$(function() {
-    $("yellowcircle1").click(function(){
-        $("#Bigeye1","#Bigeye2").css("opacity", "100");
-    });
-$(window).load(function(){
-$(function() {
-    $("surprised").click(function(){
-        $("#bigsemimouth").css("opacity", "100");
-    })
-</script>
+
+  function one() {
+document.getElementById('Yellowcircle').style.opacity = 1;
+}
+ function two() {
+document.getElementById('Bigeye1').style.opacity = 1; 
+document.getElementById('Bigeye2').style.opacity = 1;
+ }
+  function three() {
+document.getElementById('bigsemimouth').style.opacity = 1;
+ }
